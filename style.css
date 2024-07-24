@@ -1,0 +1,9 @@
+body { 
+    background-color: lightgreen;
+    font-family: 'Montserrat';
+    font-size: 22px;
+}
+
+#center-section {
+    text-align: center;
+}
