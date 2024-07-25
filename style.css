@@ -1,0 +1,28 @@
+body { 
+    background-color: #09933E;
+    font-family: 'Montserrat';
+    font-size: 22px;
+}
+
+img {
+    border-style: solid;
+    padding: 2%;
+    border-radius: 2%;
+}
+
+#center-section {
+    text-align: center;
+    background-color: gainsboro;
+    border-style: solid;
+    border-radius: 5%;
+    margin: 5%;
+    padding: 5%;
+    box-shadow: 5% 5% gray;
+    box-shadow: 10px 5px 5px black;
+}
+
+p {
+    background-color: #95B6A1;
+    border-style: solid;
+    padding: 1%;
+}
