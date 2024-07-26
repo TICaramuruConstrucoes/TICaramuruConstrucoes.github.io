@@ -1,14 +1,15 @@
 body { 
     background-color: #09933E;
-    font-family: 'Montserrat';
-    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px; 
+    margin: 0;
+    padding: 0;
 }
 
 img {
-    border-style: solid;
     padding: 2%;
-    border-radius: 2%;
-    width: 80%;
+    width: 90%; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #center-section {
@@ -16,14 +17,29 @@ img {
     background-color: gainsboro;
     border-style: solid;
     border-radius: 5%;
-    margin: 5%;
+    margin: 2%;
     padding: 5%;
-    box-shadow: 5% 5% gray;
-    box-shadow: 10px 5px 5px black;
+    box-shadow: 5px 5px 5px black;
 }
 
 p {
     background-color: #95B6A1;
     border-style: solid;
     padding: 1%;
+}
+
+/* Estilos para telas maiores */
+@media (min-width: 600px) {
+    body {
+        font-size: 22px;
+    }
+
+    img {
+        width: 80%;
+    }
+
+    #center-section {
+        margin: 2% 20% 2% 20%;
+        box-shadow: 0px 2px 4px black;
+    }
 }
