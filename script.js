@@ -25,12 +25,32 @@ function displayParams(params) {
         if (params.hasOwnProperty(key)) {
             // Cria um novo elemento <p> para cada par chave=valor
             const paragraph = document.createElement('p');
-            // Define o conteúdo do parágrafo com a chave em negrito
-            paragraph.innerHTML = `<strong>${key}</strong>: ${params[key]}`;
+            // Verifica se a key corresponde a data de nascimento para fazer o calculo 
+            if (key == "Nascimento") {
+                paragraph.innerHTML = `<strong>Idade</strong>: ${calcularIdade(params[key])}`;
+            }
+            else {
+                // Define o conteúdo do parágrafo com a chave em negrito
+                paragraph.innerHTML = `<strong>${key}</strong>: ${params[key]}`;
+            }
             // Adiciona o elemento <p> ao elemento de saída
             outputDiv.appendChild(paragraph);
         }
     }
+}
+
+// Função para calcular a idade com base na data de nascimento
+function calcularIdade(dataNascimento) {
+    const hoje = new Date();
+    const nascimento = new Date(dataNascimento);
+    let idade = hoje.getFullYear() - nascimento.getFullYear();
+    const mes = hoje.getMonth() - nascimento.getMonth();
+    
+    if (mes < 0 || (mes === 0 && hoje.getDate() < nascimento.getDate())) {
+        idade--;
+    }
+    
+    return idade;
 }
 
 // Executa as funções para obter e exibir os parâmetros da URL
